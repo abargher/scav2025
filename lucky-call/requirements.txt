@@ -1,4 +1,7 @@
 gpiozero
 selenium
 webdriver_manager
+pyautogui
+selenium-stealth
+playwright
 
