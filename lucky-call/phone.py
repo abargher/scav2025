@@ -34,10 +34,22 @@ def place_call():
                 break
             curr_ind +=1
     print(f"found number {phone_num}")
+    keyboard.send(Keycode.COMMAND, Keycode.SPACE)
+    time.sleep(0.2)
+    write_text.write("chrome\n")
+    time.sleep(0.5)
+    keyboard.send(Keycode.COMMAND, Keycode.T)
+    call_url = f"https://voice.google.com/u/0/calls?a=nc,%2B1{phone_num}\n"
+    write_text.write(call_url)
+    time.sleep(2.0)
+    keyboard.send(Keycode.ENTER)
     
-
 def hang_up():
     print("hanging up")
+    keyboard.send(Keycode.COMMAND, Keycode.W)
+    time.sleep(0.5)
+    keyboard.send(Keycode.ENTER)
+    
     
 
 # HID keyboard support
